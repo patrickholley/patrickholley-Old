@@ -1,0 +1,54 @@
+.myLinkHam {
+    margin-right: 25px;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.myLinks {
+    display: flex;
+    list-style-type: none;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+    .myLinks a {
+        margin-right: 25px;
+    }
+
+    .myLinks a:link, a:visited {
+        color: #f9cf00;
+        text-decoration: none;
+    }
+
+    .myLinks a:hover {
+        color: white;
+    }
+
+    .myLinks a:active {
+        color: #f9cf00;
+    }
+
+.myName {
+    font-size: 2rem;
+    margin-left: 25px;
+}
+
+.myNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #4484ce;
+    color: #f9cf00;
+    height: 80px;
+}
+
+@media (max-width: 700px) {
+    .myLinkHam {
+        display: inline;
+    }
+
+    .myLinks {
+        display: none;
+    }
+}
