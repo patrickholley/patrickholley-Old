@@ -1,3 +1,27 @@
+#about {
+    height: 500px;
+    width: 100%;
+    background-color: white;
+}
+
+#contact {
+    height: 500px;
+    width: 100%;
+    background-color: #f7f5e6;
+}
+
+#home {
+    height: 500px;
+    width: 100%;
+    background-color: white;
+}
+
+#portfolio {
+    height: 500px;
+    width: 100%;
+    background-color: #f7f5e6;
+}
+
 .myLinkHam {
     margin-right: 25px;
     font-size: 1.5rem;
@@ -8,40 +32,38 @@
     display: flex;
     list-style-type: none;
     font-size: 1.5rem;
-    text-decoration: none;
 }
-
-    .myLinks a {
-        margin-right: 25px;
-    }
-
-    .myLinks a:link, a:visited {
-        color: #f9cf00;
-        text-decoration: none;
-    }
-
-    .myLinks a:hover {
-        color: white;
-    }
-
-    .myLinks a:active {
-        color: #f9cf00;
-    }
 
 .myName {
     font-size: 2rem;
     margin-left: 25px;
+    align-content: center;
 }
 
 .myNav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #4484ce;
-    color: #f9cf00;
+    background-color: #333a56;
+    color: #f7f5e6;
     height: 80px;
+    text-decoration: none;
 }
+
+    .myNav a {
+        margin-right: 25px;
+    }
+
+        .myNav a:link, a:visited, a:active {
+            color: #f7f5e6;
+            text-decoration: none;
+        }
+
+        .myNav a:hover {
+            text-decoration: underline;
+        }
 
 @media (max-width: 700px) {
     .myLinkHam {
