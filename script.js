@@ -1,14 +1,19 @@
-$('.myLinks a').click( function() {
-    let idLink = $(this).text().toLowerCase()
+$('.myLinks a').click((e) => {
+    e.preventDefault();
+    let idLink = e.currentTarget.text.toLowerCase();
      $('html, body').animate({
           scrollTop: $(`#${idLink}`).offset().top-80
-     }, 800);
+     }, {duration: 800, queue: false});
 });
 
 $(window).scroll(() => {
-    let value = $(this).scrollTop()
+    let value = $(this).scrollTop();
     if (value > 80) {
-        $('.myNav').css({'padding':'0px, 25px', 'height':'60px'})
+        $('.myNav').animate({'background-color':'rgba(51, 58, 86, 1)', 'height':'60px', 'color':'white'}, {duration: 200, queue: false});
+        $('.myNav a').animate({'color':'white'}, {duration: 200, queue: false});
     }
-    else $('.myNav').css({'padding':'0px', 'height':'80px'})
+    else {     
+        $('.myNav').animate({'background-color':'rgba(51, 58, 86, 0)', 'height':'80px', 'color':'#333a56'}, {duration: 200, queue: false});
+        $('.myNav a').animate({'color':'#333a56'}, {duration: 200, queue: false});
+    }
 })
