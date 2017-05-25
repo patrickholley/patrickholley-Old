@@ -23,6 +23,10 @@
     background-color: #f7f5e6;
 }
 
+.homeHR {
+    transform:scale(12, 1)
+}
+
 .homeName {
     font-size: 2rem;
 }
@@ -48,7 +52,7 @@
 }
 
 .homeTitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .myLinkHam {
