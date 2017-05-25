@@ -7,19 +7,48 @@
 #contact {
     height: 500px;
     width: 100%;
-    background-color: #f7f5e6;
+    background-color: #333a56;
 }
 
 #home {
     height: 500px;
     width: 100%;
     background-color: white;
+    padding-top: 80px;
 }
 
 #portfolio {
     height: 500px;
     width: 100%;
     background-color: #f7f5e6;
+}
+
+.homeName {
+    font-size: 2rem;
+}
+
+.homePic {
+    width: 100%;
+    height: 200px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+    .homePic img {
+        height: 190px;
+        width: 190px;
+        border: 5px solid #333a56;
+        border-radius: 50%;
+    }
+
+.homeText {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.homeTitle {
+    font-size: 1.5rem;
 }
 
 .myLinkHam {
