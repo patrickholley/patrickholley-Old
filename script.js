@@ -1,8 +1,10 @@
 $('.myLinks a').click((e) => {
     e.preventDefault();
     let idLink = e.currentTarget.text.toLowerCase();
+    let margin = 60;
+    if (idLink == "home") margin = 80;
      $('html, body').animate({
-          scrollTop: $(`#${idLink}`).offset().top-80
+          scrollTop: $(`#${idLink}`).offset().top-margin
      }, {duration: 800, queue: false});
 });
 
