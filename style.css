@@ -24,9 +24,18 @@
 }
 
 .homeHR {
-    font-size: 3rem;
-    transform:scale(12, 1)
+    text-align: center;
+    margin: 0 auto;
 }
+
+    .homeHR hr {
+        border: none;
+        height: 2px;
+        margin: 10px 25% 10px 25%;
+        width: 50%;
+        color: #333a56;
+        background-color: #333a56;
+    }
 
 .homeName {
     margin-top: 80px;
