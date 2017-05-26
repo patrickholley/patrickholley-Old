@@ -23,6 +23,10 @@
     background-color: #f7f5e6;
 }
 
+.contactMessage {
+    opacity: 0.5;
+}
+
 .homeHR {
     text-align: center;
     margin: 0 auto;
