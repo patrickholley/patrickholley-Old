@@ -29,6 +29,13 @@
     align-items: center;
 }
 
+.contactFormInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .contactFormInputs input {
     margin-top: 20px;
     height: 60px;
