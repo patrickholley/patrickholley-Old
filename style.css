@@ -5,9 +5,9 @@
 }
 
 #contact {
-    height: 500px;
     width: 100%;
     background-color: #333a56;
+    text-align: center;
 }
 
 #home {
@@ -23,8 +23,51 @@
     background-color: #f7f5e6;
 }
 
-.contactMessage {
-    opacity: 0.5;
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactFormInputs input {
+    margin-top: 20px;
+    height: 60px;
+    width: 600px;
+    max-width: 80%;
+    font-size: 1.5rem;
+    border: 0;
+}
+
+.contactMessageDiv {
+    margin-top: 20px;
+    width: 600px;
+    max-width: 80%;
+    height: 300px;
+    font-size: 1.5rem;
+}
+
+.contactTitle {
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding-top: 80px;
+}
+
+.contactPrompt {
+    color: #f7f5e6;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.contactSubmit {
+    width: 100px;
+    background-color: white;
+    margin: 20px 0 20px 0;
+    height: 60px;
+    width: 300px;
+    max-width: 80%;
+    font-size: 1.5rem;
+    border: 0;
 }
 
 .homeHR {

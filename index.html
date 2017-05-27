@@ -26,7 +26,19 @@
         <div id="portfolio"></div>
         <div id="about"></div>
         <div id="contact">
-            <div><textarea class="contactMessage"></textarea></div>
+            <div class="contactTitle">Contact Me</div>
+            <div class="contactPrompt">Send me a message!</div>
+            <form class="contactForm">
+                <div class="contactFormInputs">
+                    <input type="text" class="contactName" placeholder="Your Name">
+                    <input type="email" class="contactEmail" placeholder="Your Email">
+                    <input type="text" class="contactPhone" placeholder="Your Phone">
+                </div>
+                <div class="contactMessageDiv">
+                    <textarea class="contactMessage" placeholder="Your Message"></textarea>
+                </div>
+                <input class="contactSubmit" type="submit" value="Send Message">
+            </form>
         </div>
         
         <script
@@ -47,6 +59,7 @@
                 emailjs.init("user_UloIceK7AcMxlkBHv8AFN");
             })();
         </script>
+        <script src="tinymce-placeholder.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
