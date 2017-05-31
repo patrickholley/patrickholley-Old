@@ -1,3 +1,5 @@
+alert('This website is currently under construction. You may send an email, but no other functionality exists at this time. Thank you for your patience.')
+
 let isSending = false;
 
 let checkScroll = () => {
