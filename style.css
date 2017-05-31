@@ -212,10 +212,21 @@
 }
 
 .portfolio-title {
+    color: white;
+}
+
+.section-title {
     text-align: center;
     padding: 20px;
-    color: white;
     font-size: 2rem;
+}
+
+.skills-resume {
+    text-align: center;
+}
+
+.skills-title {
+    color: #333a56;
 }
 
 @media (max-width: 700px) {
