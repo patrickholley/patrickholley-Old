@@ -1,9 +1,3 @@
-#about {
-    height: 500px;
-    width: 100%;
-    background-color: white;
-}
-
 #contact {
     width: 100%;
     background-color: #333a56;
@@ -24,7 +18,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: #333a56
+    color: #333a56;
 }
 
 #contact-submit:hover {
@@ -49,9 +43,14 @@
 }
 
 #portfolio {
+    width: 100%;
+    background-color: #333a56;
+}
+
+#skills {
     height: 500px;
     width: 100%;
-    background-color: #f7f5e6;
+    background-color: white;
 }
 
 .contact-form {
@@ -99,6 +98,10 @@
     font-size: 2rem;
     margin-bottom: 10px;
 }
+
+    .footer-social > a {
+        color: white;
+    }
 
 .home-hr {
     text-align: center;
@@ -169,6 +172,50 @@
     height: 80px;
     text-decoration: none;
     z-index: 1;
+}
+
+.portfolio-piece {
+    height: 250px;
+    min-width: 250px;
+    background-color: white;
+    border-radius: 25px;
+    margin: 50px;
+}
+
+.portfolio-piece-background {
+    height: 150px;
+    width: 200px;
+    margin: 25px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+    .portfolio-piece-background > img {
+        display: block;
+        height: 100%;
+        width: auto;
+        margin: auto;
+    }
+
+.portfolio-piece-title {
+    width: 90%;
+    margin: 0 auto;
+    color: #333a56;
+    text-align: center;
+}
+
+.portfolio-set {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.portfolio-title {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 2rem;
 }
 
 @media (max-width: 700px) {
