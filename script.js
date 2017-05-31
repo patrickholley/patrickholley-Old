@@ -20,9 +20,9 @@ $(window).scroll(() => {
 })
 
 let sendEmail = () => {
-    emailjs.send("outlook","template_pAKc748q",{name: "James", notes: "Check this out!"})
+    emailjs.send("outlook","pholley",{name: "James", reply_email: "john@doe.com", message: "Check this out!", notes: "Not awesome?"})
     .then((res) => {
-        alert('Your email has been sent. Thank you for reaching out to me, and I will get back to you as quickly as possible.')
+        alert('Your email thas been sent. Thank you for reaching out to me, and I will get back to you as quickly as possible.')
     }, (err) => {
         alert('Something happened while the email was trying to send itself. Please try again or email me directly at patrick_holley@outlook.com.')
     });

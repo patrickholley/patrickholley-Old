@@ -8,6 +8,27 @@
     width: 100%;
     background-color: #333a56;
     text-align: center;
+    padding-bottom: 80px;
+}
+
+#contactSubmit {
+    width: 100px;
+    background-color: white;
+    margin-top: 40px;
+    height: 60px;
+    width: 600px;
+    max-width: 80%;
+    font-size: 1.5rem;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #333a56
+}
+
+#contactSubmit:hover {
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 #home {
@@ -29,36 +50,27 @@
     align-items: center;
 }
 
-.contactFormInputs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.contactFormInputs input {
+.contactForm input {
     margin-top: 20px;
-    height: 60px;
-    width: 600px;
-    max-width: 80%;
+    height: 40px;
+    width: 580px;
+    max-width: calc(80% - 10px);
     font-size: 1.5rem;
     border: 0;
+    padding: 10px;
 }
 
-.contactMessageDiv {
+.contactForm textarea {
     margin-top: 20px;
-    width: 600px;
-    max-width: 80%;
-    height: 300px;
+    height: 200px;
+    width: 580px;
+    max-width: calc(80% - 20px);
     font-size: 1.5rem;
+    border: 0;
+    padding: 10px;
+    resize: none;
 }
 
-.contactTitle {
-    color: white;
-    text-transform: uppercase;
-    font-size: 3rem;
-    padding-top: 80px;
-}
 
 .contactPrompt {
     color: #f7f5e6;
@@ -66,15 +78,11 @@
     font-size: 2rem;
 }
 
-.contactSubmit {
-    width: 100px;
-    background-color: white;
-    margin: 20px 0 20px 0;
-    height: 60px;
-    width: 300px;
-    max-width: 80%;
-    font-size: 1.5rem;
-    border: 0;
+.contactTitle {
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding-top: 80px;
 }
 
 .homeHR {
@@ -131,6 +139,7 @@
     color: #333a56;
     height: 80px;
     text-decoration: none;
+    z-index: 1;
 }
 
     .myNav a {

@@ -29,15 +29,11 @@
             <div class="contactTitle">Contact Me</div>
             <div class="contactPrompt">Send me a message!</div>
             <form class="contactForm">
-                <div class="contactFormInputs">
-                    <input type="text" class="contactName" placeholder="Your Name">
-                    <input type="email" class="contactEmail" placeholder="Your Email">
-                    <input type="text" class="contactPhone" placeholder="Your Phone">
-                </div>
-                <div class="contactMessageDiv">
-                    <textarea class="contactMessage" placeholder="Your Message"></textarea>
-                </div>
-                <input class="contactSubmit" type="submit" value="Send Message">
+                <input type="text" id="contactName" placeholder="Your Name">
+                <input type="email" id="contactEmail" placeholder="Your Email">
+                <input type="text" id="contactPhone" placeholder="Your Phone">
+                <textarea id="contactMessage" placeholder="Your Message"></textarea>
+                <div id="contactSubmit" onclick="sendEmail()">Submit Message</div>
             </form>
         </div>
         
@@ -51,15 +47,12 @@
             integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
             crossorigin="anonymous">
         </script>
-        <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=g68hmnkn4hboyptz9xtk9i45nzlg0mg5x9sre8xlmwffz7ju"></script>
-        <script src="tinymce-options.js"></script>
         <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script type="text/javascript">
             (function(){
                 emailjs.init("user_UloIceK7AcMxlkBHv8AFN");
             })();
         </script>
-        <script src="tinymce-placeholder.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
