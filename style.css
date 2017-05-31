@@ -36,6 +36,7 @@
     color: #f7f5e6;
     height: 100px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -63,7 +64,7 @@
     margin-top: 20px;
     height: 40px;
     width: 580px;
-    max-width: calc(80% - 10px);
+    max-width: calc(80% - 20px);
     font-size: 1.5rem;
     border: 0;
     padding: 10px;
@@ -92,6 +93,11 @@
     text-transform: uppercase;
     font-size: 3rem;
     padding-top: 80px;
+}
+
+.footer-social {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 .home-hr {
@@ -131,6 +137,20 @@
     font-size: 1.5rem;
 }
 
+    .my-links > a {
+        cursor: pointer;
+        margin-right: 25px;
+    }
+
+        .my-links > a:link, a:visited, a:active {
+            color: #333a56;
+            text-decoration: none;
+        }
+
+        .my-links > a:hover {
+            text-decoration: underline;
+        }
+
 .my-name {
     cursor: default;
     font-size: 2rem;
@@ -150,20 +170,6 @@
     text-decoration: none;
     z-index: 1;
 }
-
-    .my-nav a {
-        cursor: pointer;
-        margin-right: 25px;
-    }
-
-        .my-nav a:link, a:visited, a:active {
-            color: #333a56;
-            text-decoration: none;
-        }
-
-        .my-nav a:hover {
-            text-decoration: underline;
-        }
 
 @media (max-width: 700px) {
     .my-link-ham {

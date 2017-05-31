@@ -67,5 +67,6 @@ let sendEmail = (name, email, phone, message) => {
         isSending = false;                            
         animateSubmit()
         alert('Something happened while the email was trying to send itself. Please try again or email me directly at patrick_holley@outlook.com.')
+        console.log(err)
     });
 }
