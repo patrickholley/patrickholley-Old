@@ -11,7 +11,7 @@
     padding-bottom: 80px;
 }
 
-#contactSubmit {
+#contact-submit {
     width: 100px;
     background-color: white;
     margin-top: 40px;
@@ -27,8 +27,17 @@
     color: #333a56
 }
 
-#contactSubmit:hover {
+#contact-submit:hover {
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+#footer {
+    background-color: black;
+    color: #f7f5e6;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #home {
@@ -44,13 +53,13 @@
     background-color: #f7f5e6;
 }
 
-.contactForm {
+.contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contactForm input {
+.contact-form input {
     margin-top: 20px;
     height: 40px;
     width: 580px;
@@ -60,7 +69,7 @@
     padding: 10px;
 }
 
-.contactForm textarea {
+.contact-form textarea {
     margin-top: 20px;
     height: 200px;
     width: 580px;
@@ -72,25 +81,25 @@
 }
 
 
-.contactPrompt {
+.contact-prompt {
     color: #f7f5e6;
     font-style: italic;
     font-size: 2rem;
 }
 
-.contactTitle {
+.contact-title {
     color: white;
     text-transform: uppercase;
     font-size: 3rem;
     padding-top: 80px;
 }
 
-.homeHR {
+.home-hr {
     text-align: center;
     margin: 0 auto;
 }
 
-    .homeHR hr {
+    .home-hr hr {
         border: none;
         height: 2px;
         margin: 10px 25% 10px 25%;
@@ -99,37 +108,37 @@
         background-color: #333a56;
     }
 
-.homeName {
+.home-name {
     margin-top: 80px;
     font-size: 4.5rem;
     text-transform: uppercase;
 }
 
-.homeTitle {
+.home-title {
     font-size: 3rem;
     font-style: italic;
 }
 
-.myLinkHam {
+.my-link-ham {
     margin-right: 25px;
     font-size: 1.5rem;
     display: none;
 }
 
-.myLinks {
+.my-links {
     display: flex;
     list-style-type: none;
     font-size: 1.5rem;
 }
 
-.myName {
+.my-name {
     cursor: default;
     font-size: 2rem;
     margin-left: 25px;
     align-content: center;
 }
 
-.myNav {
+.my-nav {
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -142,26 +151,26 @@
     z-index: 1;
 }
 
-    .myNav a {
+    .my-nav a {
         cursor: pointer;
         margin-right: 25px;
     }
 
-        .myNav a:link, a:visited, a:active {
+        .my-nav a:link, a:visited, a:active {
             color: #333a56;
             text-decoration: none;
         }
 
-        .myNav a:hover {
+        .my-nav a:hover {
             text-decoration: underline;
         }
 
 @media (max-width: 700px) {
-    .myLinkHam {
+    .my-link-ham {
         display: inline;
     }
 
-    .myLinks {
+    .my-links {
         display: none;
     }
 }

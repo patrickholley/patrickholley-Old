@@ -8,10 +8,10 @@
         <link href="./reset.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="myNav">
-            <div class="myName">P. Holley</div>
-            <div class="myLinkHam">&#9776;</div>
-            <div class="myLinks">
+        <nav class="my-nav">
+            <div class="my-name">P. Holley</div>
+            <div class="my-link-ham">&#9776;</div>
+            <div class="my-links">
                 <a>Home</a>                
                 <a>Portfolio</a>
                 <a>About</a>
@@ -19,23 +19,27 @@
             </div>
         </nav>
         <div id="home">
-            <div class="homeName" >Patrick Holley</div>
-            <div class="homeHR"><hr></div>
-            <div class="homeTitle">Full-Stack Web Developer</div>
+            <div class="home-name" >Patrick Holley</div>
+            <div class="home-hr"><hr></div>
+            <div class="home-title">Full-Stack Web Developer</div>
         </div>
         <div id="portfolio"></div>
         <div id="about"></div>
         <div id="contact">
-            <div class="contactTitle">Contact Me</div>
-            <div class="contactPrompt">Send me a message!</div>
-            <form class="contactForm">
-                <input type="text" id="contactName" placeholder="Your Name">
-                <input type="email" id="contactEmail" placeholder="Your Email">
-                <input type="text" id="contactPhone" placeholder="Your Phone">
-                <textarea id="contactMessage" placeholder="Your Message"></textarea>
-                <div id="contactSubmit" onclick="sendEmail()">Submit Message</div>
+            <div class="contact-title">Contact Me</div>
+            <div class="contact-prompt">Send me a message!</div>
+            <form class="contact-form">
+                <input type="text" id="contact-name" placeholder="Your Name">
+                <input type="text" id="contact-email" placeholder="Your Email">
+                <input type="text" id="contact-phone" placeholder="Your Phone">
+                <textarea id="contact-message" placeholder="Your Message"></textarea>
+                <div id="contact-submit" onclick="submitMessage()">Submit Message</div>
             </form>
         </div>
+        <footer id="footer">
+            <div class="footer-social"></div>
+            <div class="footer-copyright">&copy; 2017 Patrick Holley</div>
+        </footer>
         
         <script
             src="https://code.jquery.com/jquery-3.2.1.js"
