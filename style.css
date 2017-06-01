@@ -48,7 +48,6 @@
 }
 
 #skills {
-    height: 500px;
     width: 100%;
     background-color: white;
 }
@@ -267,14 +266,29 @@
             text-decoration: underline;
         }
 
+.skills-set {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.skills-skill {
+    text-align: center;
+    height: 150px;
+    width: 120px;
+    margin: 30px;
+    font-size: 1.2rem;
+    color: #333a56;
+}
+
 .skills-title {
     color: #333a56;
 }
 
 @media (max-width: 700px) {
-    .my-link-ham {
+    /*.my-link-ham {
         display: inline;
-    }
+    }*/
 
     .my-links {
         display: none;
