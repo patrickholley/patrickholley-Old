@@ -3,10 +3,10 @@ let isSending = false;
 let checkScroll = () => {
     let value = $(this).scrollTop();
     if (value > 80) {
-        $('.my-nav').animate({'background-color':'rgba(51, 58, 86, 1)', 'height':'60px', 'color':'white'}, {duration: 200, queue: false});
+        $('.my-nav').animate({'background-color':'rgba(51, 58, 86, 1)', /*'height':'60px',*/ 'color':'white'}, {duration: 200, queue: false});
         $('.my-nav a').animate({'color':'white'}, {duration: 200, queue: false});
     } else {     
-        $('.my-nav').animate({'background-color':'rgba(51, 58, 86, 0)', 'height':'80px', 'color':'#333a56'}, {duration: 200, queue: false});
+        $('.my-nav').animate({'background-color':'rgba(51, 58, 86, 0)', /*'height':'80px',*/ 'color':'#333a56'}, {duration: 200, queue: false});
         $('.my-nav a').animate({'color':'#333a56'}, {duration: 200, queue: false});
     }
 }
