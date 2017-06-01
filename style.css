@@ -87,6 +87,16 @@
     font-size: 2rem;
 }
 
+.contact-social {
+    font-size: 2rem;
+    margin: 25px;
+}
+
+.contact-social > a{
+    color: white;
+    margin: 25px;
+}
+
 .contact-title {
     color: white;
     text-transform: uppercase;
@@ -123,6 +133,15 @@
     text-transform: uppercase;
 }
 
+.home-pic {
+    background-image: url('ProfilePicture.jpg');
+    height: 190px;
+    width: 190px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid #333a56;
+}
+
 .home-title {
     font-size: 3rem;
     font-style: italic;
@@ -144,11 +163,6 @@
         cursor: pointer;
         margin-right: 25px;
     }
-
-        .my-links > a:link, a:visited, a:active {
-            color: #333a56;
-            text-decoration: none;
-        }
 
         .my-links > a:hover {
             text-decoration: underline;
@@ -209,6 +223,13 @@
     text-align: center;
 }
 
+.portfolio-prompt {
+    color: #f7f5e6;
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 .portfolio-set {
     display: flex;
     flex-flow: row wrap;
@@ -227,8 +248,24 @@
 }
 
 .skills-resume {
-    text-align: center;
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333a56;
 }
+
+    .skills-resume > a {
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+
+        .skills-resume > a:hover {
+            text-decoration: underline;
+        }
 
 .skills-title {
     color: #333a56;
