@@ -54,7 +54,7 @@ let animateSubmit = () => {
 }
 
 let sendEmail = (name, email, phone, message) => {
-    emailjs.send("outlook","pholley",{name, email, phone, message})
+    emailjs.send("gmail","pholley",{name, email, phone, message})
     .then((res) => {
         isSending = false;
         $('#contact-name').val('');
