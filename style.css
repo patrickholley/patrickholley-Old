@@ -27,7 +27,7 @@
 
 #footer {
     background-color: black;
-    color: #f7f5e6;
+    color: white;
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@
 
 
 .contact-prompt {
-    color: #f7f5e6;
+    color: white;
     font-style: italic;
     font-size: 2rem;
 }
@@ -223,7 +223,7 @@
 }
 
 .portfolio-prompt {
-    color: #f7f5e6;
+    color: white;
     font-style: italic;
     font-size: 1.5rem;
     text-align: center;
