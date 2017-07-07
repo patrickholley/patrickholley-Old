@@ -1,1 +1,145 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+#contact {
+  width: 100%;
+  padding-bottom: 80px;
+  color: #c5c1c0;
+  background-color: #0a1612;
+  text-align: center;
+}
+
+#home {
+  width: 100%;
+  padding-bottom: 80px;
+  color: #f7ce3e;
+  background-color: #1a2930;
+  text-align: center;
+  padding-top: 120px;
+}
+
+#nav {
+  position: fixed;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #f7ce3e;
+  color: #1a2930;
+  height: 80px;
+  text-decoration: none;
+  z-index: 1;
+}
+
+#portfolio {
+  width: 100%;
+  padding-bottom: 80px;
+  color: #c5c1c0;
+  background-color: #0a1612;
+  text-align: center;
+}
+
+#skills {
+  width: 100%;
+  padding-bottom: 80px;
+  color: #0a1612;
+  background-color: #c5c1c0;
+  text-align: center;
+}
+
+.home-pic {
+  background: url("../img/profile.jpg") no-repeat center;
+  background-size: cover;
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  border-radius: 50%;
+  border: 5px solid #f7ce3e;
+  opacity: 0;
+  position: absolute;
+}
+
+.home-pic-bucket {
+  height: 200px;
+  width: 200px;
+  transition: height 0.5s, width 0.5s;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media only screen and (min-width: 470px) {
+  .home-pic-bucket {
+    height: 235px;
+    width: 235px;
+  }
+}
+
+@media only screen and (min-width: 810px) {
+  .home-pic-bucket {
+    height: 270px;
+    width: 270px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .home-pic-bucket {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+.nav-link-ham {
+  margin-right: 25px;
+  font-size: 2rem;
+  display: none;
+}
+
+.nav-links {
+  font-family: "Oswald", sans-serif;
+  font-style: italic;
+  font-size: 2rem;
+  display: flex;
+  list-style-type: none;
+  padding-top: 3px;
+}
+
+.nav-links a {
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav-links a {
+    margin-right: 50px;
+  }
+}
+
+.nav-links a:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.nav-links-base a:hover:after {
+  width: 100%;
+  background-color: #1a2930;
+}
+
+.nav-links-alter a:hover:after {
+  width: 100%;
+  background-color: #f7ce3e;
+}
+
+.nav-name {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  cursor: default;
+  margin-left: 50px;
+  height: 60px;
+}
+
+.nav-name::first-letter {
+  font-size: 3.5rem;
+}

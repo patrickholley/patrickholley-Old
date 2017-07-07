@@ -7,6 +7,7 @@
 @import 'partials/_functions';
 
 @include google-font('Droid+Serif');
+@include google-font('Oswald');
 
 //////////////////
 /////Elements/////
@@ -16,6 +17,129 @@
 /////IDs/////
 /////////////
 
+#contact {
+    @include major-section($pri-color, $sec-color);
+}
+
+#footer {
+
+}
+
+#home {
+    @include major-section($qua-color, $ter-color);
+    
+    padding-top: 120px;
+}
+
+#nav {
+    position: fixed;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $qua-color;
+    color: $ter-color;
+    height: 80px;
+    text-decoration: none;
+    z-index: 1;
+}
+
+#portfolio {
+    @include major-section($pri-color, $sec-color);    
+}
+
+#skills {
+    @include major-section($sec-color, $pri-color);    
+}
+
 /////////////////
 /////Classes/////
 /////////////////
+
+.home-pic {
+    background: url('../img/profile.jpg') no-repeat center;
+    background-size: cover;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    border-radius: 50%;
+    border: 5px solid $qua-color;
+    opacity: 0;
+    position: absolute;
+}
+
+.home-pic-bucket {
+    height: 200px;
+    width: 200px;
+    transition: height 0.5s, width 0.5s;
+    @include small-screens {
+        height: 235px;
+        width: 235px;
+    }
+    @include medium-screens {
+        height: 270px;
+        width: 270px;
+    }
+    @include large-screens {
+        height: 300px;
+        width: 300px;
+    }
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav-link-ham {
+    margin-right: 25px;
+    font-size: 2rem;
+    display: none;
+}
+
+.nav-links {
+    @include minor-text($major-font, 2rem);
+
+    display: flex;
+    list-style-type: none;
+    padding-top: 3px;
+
+    a {
+        cursor: pointer;
+        margin-right: 25px;
+        @include large-screens {
+            margin-right: 50px;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 0;
+            background: transparent;
+            transition: width .5s ease, background-color .5s ease;
+        }
+    }
+}
+
+.nav-links-base {
+    & a:hover:after {
+        width: 100%;
+        background-color: $ter-color;
+    }
+}
+
+.nav-links-alter {
+    & a:hover:after {
+        width: 100%;
+        background-color: $qua-color;
+    }
+}
+
+.nav-name {
+    @include major-text($major-font, 2.5rem);
+
+    cursor: default;
+    margin-left: 50px;
+    height: 60px;
+
+    &::first-letter {
+        font-size: 3.5rem;
+    }
+}

@@ -4,6 +4,40 @@
   @import url(https://fonts.googleapis.com/css?family=#{$font})
 }
 
-@mixin italicized-header {
-    
+@mixin small-screens() {
+  @media only screen and (min-width: 470px) {
+    @content;
+  }
+}
+
+@mixin medium-screens() {
+  @media only screen and (min-width: 810px) {
+    @content;
+  }
+}
+
+@mixin large-screens() {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin major-text($font, $font-size) {
+    font-family: $font;
+    text-transform: uppercase;
+    font-size: $font-size;
+}
+
+@mixin major-section($color, $background-color) {
+    width: 100%;
+    padding-bottom: 80px;
+    color: $color;
+    background-color: $background-color;
+    text-align: center;
+}
+
+@mixin minor-text($font, $font-size) {
+    font-family: $font;
+    font-style: italic;
+    font-size: $font-size;
 }

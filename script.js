@@ -1,39 +1,64 @@
 let isSending = false;
-let priColor = $('.my-nav').css('color');
-let secColor = $('.my-nav').css('background-color');
+let priColor = $('#nav').css('color');
+let secColor = $('#nav').css('background-color');
 
-$(window).on('load', function(){
+$(window).on('load', () => {
     let centerMargin = (($(window).width()/2)-95);
     if (centerMargin > 380) centerMargin = 380;
-    $('.home-pic')
-        .css({'left': `-${centerMargin}px`})
-        .animate(
-            { opacity: 1 },
-            { queue: false, duration: 2000 }
-        );
+    $('#nav').slideDown(1000, () => {
+        $('.home-pic')
+            .css({'left': `-${centerMargin}px`})
+            .animate(
+                { opacity: 1 },
+                { queue: false, duration: 2000 }
+            );
 
 
-    $('.home-pic')
-        .animate(
-            {'left': 0 },
-            { queue: false, duration: 2000 }
-        );
+        $('.home-pic')
+            .animate(
+                {'left': 0 },
+                { queue: false, duration: 2000 }
+            );
+    }).css('display', 'flex');
+    
 });
 
-let checkScroll = () => {
+const checkWidth = () => {
+    let width = $(window).width();
+    if (width >= 810) {
+        $('.nav-link-ham').fadeOut(200, () => {
+            $('.nav-links').fadeIn(200);
+        });
+    } else {
+        $('.nav-links').fadeOut(200, () => {
+            $('.nav-link-ham').fadeIn(200);
+        });
+    }
+}
+
+$(window).resize(function() {
+    checkWidth();
+});
+
+const checkScroll = () => {
     let value = $(this).scrollTop();
     if (value > 80) {
-        $('.my-nav').animate({'background-color':priColor, /*'height':'60px',*/ 'color':secColor}, {duration: 200, queue: false});
-        $('.my-nav a').animate({'color':secColor}, {duration: 200, queue: false});
-    } else {     
-        $('.my-nav').animate({'background-color':secColor, /*'height':'80px',*/ 'color':priColor}, {duration: 200, queue: false});
-        $('.my-nav a').animate({'color':priColor}, {duration: 200, queue: false});
+        $('#nav').animate({'background-color':priColor, 'height':'60px', 'color':secColor}, {duration: 200, queue: false});
+        $('#nav a').animate({'color':secColor}, {duration: 200, queue: false});
+        $('.nav-links').addClass('nav-links-alter');
+        $('.nav-links').removeClass('nav-links-base');
+    } else if (value <= 80) {     
+        $('#nav').animate({'background-color':secColor, 'height':'80px', 'color':priColor}, {duration: 200, queue: false});
+        $('#nav a').animate({'color':priColor}, {duration: 200, queue: false});
+        $('.nav-links').addClass('nav-links-base');
+        $('.nav-links').removeClass('nav-links-alter');
     }
 }
 
 checkScroll();
+checkWidth();
 
-$('.my-links a').click((e) => {
+$('.nav-links a').click((e) => {
     e.preventDefault();
     let idLink = e.currentTarget.text.toLowerCase();
     let margin = 60;
@@ -47,7 +72,7 @@ $(window).scroll(() => {
     checkScroll();
 })
 
-let submitMessage = () => {
+const submitMessage = () => {
     if (!isSending) {
         isSending = true;
         let name = $('#contact-name').val();
@@ -67,13 +92,13 @@ let submitMessage = () => {
     }
 }
 
-let animateSubmit = () => {
+const animateSubmit = () => {
     $('#contact-submit').fadeOut(500, function() {
         $(this).text('Submit Message').fadeIn(500)
     });
 }
 
-let sendEmail = (name, email, phone, message) => {
+const sendEmail = (name, email, phone, message) => {
     emailjs.send("gmail","pholley",{name, email, phone, message})
     .then((res) => {
         isSending = false;
