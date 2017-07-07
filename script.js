@@ -1,13 +1,33 @@
 let isSending = false;
+let priColor = $('.my-nav').css('color');
+let secColor = $('.my-nav').css('background-color');
+
+$(window).on('load', function(){
+    let centerMargin = (($(window).width()/2)-95);
+    if (centerMargin > 380) centerMargin = 380;
+    $('.home-pic')
+        .css({'left': `-${centerMargin}px`})
+        .animate(
+            { opacity: 1 },
+            { queue: false, duration: 2000 }
+        );
+
+
+    $('.home-pic')
+        .animate(
+            {'left': 0 },
+            { queue: false, duration: 2000 }
+        );
+});
 
 let checkScroll = () => {
     let value = $(this).scrollTop();
     if (value > 80) {
-        $('.my-nav').animate({'background-color':'rgba(51, 58, 86, 1)', /*'height':'60px',*/ 'color':'white'}, {duration: 200, queue: false});
-        $('.my-nav a').animate({'color':'white'}, {duration: 200, queue: false});
+        $('.my-nav').animate({'background-color':priColor, /*'height':'60px',*/ 'color':secColor}, {duration: 200, queue: false});
+        $('.my-nav a').animate({'color':secColor}, {duration: 200, queue: false});
     } else {     
-        $('.my-nav').animate({'background-color':'rgba(51, 58, 86, 0)', /*'height':'80px',*/ 'color':'#333a56'}, {duration: 200, queue: false});
-        $('.my-nav a').animate({'color':'#333a56'}, {duration: 200, queue: false});
+        $('.my-nav').animate({'background-color':secColor, /*'height':'80px',*/ 'color':priColor}, {duration: 200, queue: false});
+        $('.my-nav a').animate({'color':priColor}, {duration: 200, queue: false});
     }
 }
 

@@ -4,14 +4,14 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./style.css" rel="stylesheet">
-        <link href="./reset.css" rel="stylesheet">
+        <link href="styles/main.css" rel="stylesheet">
+        <link href="styles/reset.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="my-nav">
-            <div class="my-name">This website is currently under construction. You may send an email and download my resume, but no other functionality exists at this time. Thank you for your patience.</div>
-            <div class="my-link-ham">&#9776;</div>
-            <div class="my-links">
+        <nav id="nav">
+            <div class="nav-name">PHolley</div>
+            <div class="nav-link-ham">&#9776;</div>
+            <div class="nav-links">
                 <a>Home</a>                
                 <a>Portfolio</a>
                 <a>Skills</a>
@@ -19,7 +19,9 @@
             </div>
         </nav>
         <div id="home">
-            <div class="home-pic"></div>
+            <div class="home-pic-bucket">
+                <div class="home-pic"></div>
+            </div>
             <div class="home-name" >Patrick Holley</div>
             <div class="home-hr"><hr></div>
             <div class="home-title">Full-Stack Web Developer</div>
@@ -28,13 +30,13 @@
             <div class="portfolio-title section-title">Portfolio</div>
             <div class="portfolio-prompt">Please refer to resume for more info, including Github repository and video walkthrough</div>
             <div class="portfolio-set">
-                <div class="portfolio-piece" id="devmtn-stats">
+                <div class="portfolio-piece">
                     <div class="portfolio-piece-background">
                         <img src="devmtn.png">
                     </div>
                     <div class="portfolio-piece-title">DevMountain Tracker (in use)</div>                    
                 </div>
-                <div class="portfolio-piece" id="fiouse">
+                <div class="portfolio-piece">
                     <div class="portfolio-piece-background">
                         <img src="fiouse_short.jpg">
                     </div>
@@ -84,11 +86,11 @@
             </div>
             <div class="contact-prompt">Send me a message!</div>
             <form class="contact-form">
-                <input type="text" id="contact-name" placeholder="Your Name">
-                <input type="text" id="contact-email" placeholder="Your Email">
-                <input type="text" id="contact-phone" placeholder="Your Phone">
-                <textarea id="contact-message" placeholder="Your Message"></textarea>
-                <div id="contact-submit" onclick="submitMessage()">Submit Message</div>
+                <input type="text" class="contact-name" placeholder="Your Name">
+                <input type="text" class="contact-email" placeholder="Your Email">
+                <input type="text" class="contact-phone" placeholder="Your Phone">
+                <textarea class="contact-message" placeholder="Your Message"></textarea>
+                <div class="contact-submit" onclick="submitMessage()">Submit Message</div>
             </form>
         </div>
         <footer id="footer">
@@ -99,7 +101,7 @@
             <div class="footer-copyright">&copy; 2017 Patrick Holley</div>
         </footer>
         
-        <script
+        <!--<script
             src="https://code.jquery.com/jquery-3.2.1.js"
             integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
             crossorigin="anonymous">
@@ -116,6 +118,6 @@
                 emailjs.init("user_UloIceK7AcMxlkBHv8AFN");
             })();
         </script>
-        <script src="script.js"></script>
+        <script src="script.js"></script>-->
     </body>
 </html>
