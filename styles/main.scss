@@ -26,7 +26,7 @@
 }
 
 #home {
-    @include major-section($qua-color, $ter-color);
+    @include major-section($pri-color, $ter-color);
     
     padding-top: 120px;
 }
@@ -39,9 +39,10 @@
     width: 100%;
     background-color: $qua-color;
     color: $ter-color;
-    height: 80px;
+    height: 0px;
     text-decoration: none;
     z-index: 1;
+    transition: height .75s;    
 }
 
 #portfolio {
@@ -59,10 +60,10 @@
 .home-pic {
     background: url('../img/profile.jpg') no-repeat center;
     background-size: cover;
-    height: calc(100% - 20px);
-    width: calc(100% - 20px);
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
     border-radius: 50%;
-    border: 10px solid $qua-color;
+    border: 5px solid $pri-color;
     opacity: 0;
     position: absolute;
 }
@@ -87,26 +88,40 @@
     position: relative;
 }
 
+.nav-link-bucket {
+    position: relative;
+    height: 100%;
+}
+
 .nav-link-ham {
+    cursor: pointer;
     margin-right: 25px;
     font-size: 2rem;
     display: none;
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 100%;
 }
 
 .nav-links {
-    @include minor-text($major-font, 2rem);
+    @include minor-text($major-font, 1.5rem);
 
+    position: absolute;
+    background-color: $ter-color;
     display: flex;
-    list-style-type: none;
-    padding-top: 3px;
+    flex-flow: column;
+    right: 0;
+    text-align: right;
 
     a {
+        display: block;
+        color: $qua-color;
+        margin-left: auto;
+        margin-right: 0;
+        padding: 5px 25px;
         cursor: pointer;
-        margin-right: 25px;
-        transition: margin-right .5s;
-        @include large-screens {
-            margin-right: 50px;
-        }
 
         &:after {
             content: '';
@@ -115,6 +130,24 @@
             width: 0;
             background: transparent;
             transition: width .5s ease, background-color .5s ease;
+        }
+    }
+    
+
+    @include medium-screens {
+        @include minor-text($major-font, 2rem);           
+        display: flex;
+        list-style-type: none;
+        padding-top: 3px;
+
+        a {
+            margin: 0 025px 0;
+            transition: margin-right .5s;
+            @include large-screens {
+                margin-right: 50px;
+            }
+
+            
         }
     }
 }

@@ -2,6 +2,7 @@ let isSending = false;
 let priColor = $('#nav').css('color');
 let secColor = $('#nav').css('background-color');
 let resizing = false;
+let navHeight = '80px';
 
 $(window).on('load', () => {
     let centerMargin = (($(window).width()/2)-95);
@@ -30,23 +31,22 @@ $(window).on('load', () => {
 });
 
 const checkWidth = (width) => {
-    if (width >= 810) {
+    /*if (width >= 810) {
         $('.nav-link-ham').fadeOut(100, () => {
             $('.nav-links').fadeIn(100);
         });
-    } else {  
+    } else if (width < 810) {
         $('.nav-links').fadeOut(100, () => {
             $('.nav-link-ham').fadeIn(100);
         });
-    }
+    }*/
 }
 
 $(window).resize(() => {
     if (!resizing) {
         resizing = true;
         setTimeout(() => {
-            let width = $(window).width();
-            checkWidth(width);
+            checkWidth($(window).width());
             resizing = false;
         }, 25)
     }
@@ -55,13 +55,13 @@ $(window).resize(() => {
 const checkScroll = () => {
     let value = $(this).scrollTop();
     if (value > 80) {
-        $('#nav').animate({'background-color':priColor, 'height':'60px', 'color':secColor}, {duration: 200, queue: false});
-        $('#nav a').animate({'color':secColor}, {duration: 200, queue: false});
+        $('#nav').css({'background-color':priColor, 'height':'60px', 'color':secColor}/*, {duration: 200, queue: false}*/);
+        /*$('#nav a').animate({'color':secColor}, {duration: 200, queue: false});*/
         $('.nav-links').addClass('nav-links-alter');
         $('.nav-links').removeClass('nav-links-base');
     } else if (value <= 80) {     
-        $('#nav').animate({'background-color':secColor, 'height':'80px', 'color':priColor}, {duration: 200, queue: false});
-        $('#nav a').animate({'color':priColor}, {duration: 200, queue: false});
+        $('#nav').css({'background-color':secColor, 'height':'80px', 'color':priColor}/*, {duration: 200, queue: false}*/);
+        /*$('#nav a').animate({'color':priColor}, {duration: 200, queue: false});*/
         $('.nav-links').addClass('nav-links-base');
         $('.nav-links').removeClass('nav-links-alter');
     }
@@ -83,6 +83,9 @@ $('.nav-links a').click((e) => {
 $(window).scroll(() => {
     checkScroll();
 })
+
+$('.nav-link-ham').click(() => {
+});
 
 const submitMessage = () => {
     if (!isSending) {
