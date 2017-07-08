@@ -1,6 +1,7 @@
 let isSending = false;
 let priColor = $('#nav').css('color');
 let secColor = $('#nav').css('background-color');
+let resizing = false;
 
 $(window).on('load', () => {
     let centerMargin = (($(window).width()/2)-95);
@@ -13,31 +14,42 @@ $(window).on('load', () => {
                 { queue: false, duration: 2000 }
             );
 
-
         $('.home-pic')
             .animate(
                 {'left': 0 },
                 { queue: false, duration: 2000 }
             );
-    }).css('display', 'flex');
-    
+    }).css({
+        'display': 'flex',
+        'opacity': 0
+    })
+    .animate(
+        { opacity: 1 },
+        { queue: false, duration: 1000 }
+    );
 });
 
-const checkWidth = () => {
-    let width = $(window).width();
+const checkWidth = (width) => {
     if (width >= 810) {
-        $('.nav-link-ham').fadeOut(200, () => {
-            $('.nav-links').fadeIn(200);
+        $('.nav-link-ham').fadeOut(100, () => {
+            $('.nav-links').fadeIn(100);
         });
-    } else {
-        $('.nav-links').fadeOut(200, () => {
-            $('.nav-link-ham').fadeIn(200);
+    } else {  
+        $('.nav-links').fadeOut(100, () => {
+            $('.nav-link-ham').fadeIn(100);
         });
     }
 }
 
-$(window).resize(function() {
-    checkWidth();
+$(window).resize(() => {
+    if (!resizing) {
+        resizing = true;
+        setTimeout(() => {
+            let width = $(window).width();
+            checkWidth(width);
+            resizing = false;
+        }, 25)
+    }
 });
 
 const checkScroll = () => {
@@ -56,7 +68,7 @@ const checkScroll = () => {
 }
 
 checkScroll();
-checkWidth();
+checkWidth($(window).width());
 
 $('.nav-links a').click((e) => {
     e.preventDefault();
